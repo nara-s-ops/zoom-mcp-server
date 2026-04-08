@@ -1,10 +1,4 @@
 {
   "version": 2,
-  "buildCommand": "npm install",
-  "outputDirectory": ".",
-  "functions": {
-    "api/mcp.js": {
-      "includeFiles": "src/**/*"
-    }
-  }
+  "buildCommand": "npm install && npm run build"
 }
