@@ -1,5 +1,7 @@
 {
-  "rewrites": [
-    { "source": "/mcp", "destination": "/api/[transport]" }
-  ]
+  "functions": {
+    "api/mcp.js": {
+      "includeFiles": "src/**"
+    }
+  }
 }
