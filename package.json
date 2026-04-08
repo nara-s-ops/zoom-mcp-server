@@ -3,19 +3,15 @@
   "version": "1.0.0",
   "type": "module",
   "description": "MCP Server for Zoom API",
-  "main": "src/index.js",
-  "bin": {
-    "zoom-mcp-server": "src/index.js"
-  },
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "node --watch src/index.js",
-    "inspect": "npx -y @modelcontextprotocol/inspector node src/index.js"
+    "build": "npx esbuild api/mcp.js --bundle --platform=node --format=esm --outfile=api/mcp.js --allow-overwrite --external:node:*",
+    "start": "node src/index.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.9.0",
     "axios": "^1.6.2",
     "dotenv": "^16.3.1",
-    "zod": "^3.22.4"
+    "zod": "^3.22.4",
+    "esbuild": "^0.25.0"
   }
 }
